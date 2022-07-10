@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sujeito sem classe</title>
+
+    <style>
+      body {
+        background: #f2f2f2;
+      }
+
+      .container {
+        width: 500px;
+        background: #fff;
+        border-radius: 10px;
+        margin: 150px auto;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
+        border: 1px solid #fff;
+      }
+
+      h1 {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .opcoes {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+
+      /* As classes .opcao e .icone podem ser removidas e os estilos aplicados 
+         usando seletor hierárquico */
+
+      .opcoes div {
+        border: 1px solid #aaaaaa;
+        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      .opcoes div:hover {
+        background-color: #f2f2f2;
+      }
+
+      .opcoes img {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Escolha seu reality favorito:</h1>
+      <div class="opcoes">
+        <div>
+          <img src="bbb.png" />
+        </div>
+        <div>
+          <img src="deferias.jpg" />
+        </div>
+        <div>
+          <img src="nolimite.jpg" />
+        </div>
+        <div>
+          <img src="fazenda.webp" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
