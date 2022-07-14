@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aluga Aí</title>
+  </head>
+  <body>
+    <h1>Alugando a casa dos seus SONHOS!</h1>
+    <h2>Motivos para alugar com a gente:</h2>
+    <ul>
+      <li>Aluga baratin!</li>
+      <li>Aluga rapidin!</li>
+      <li>Aluga facin!</li>
+    </ul>
+    <h3>Alugue o seu lar AGORA!</h3>
+    <button onclick="calcRent()">Calcular Preço do Aluguel</button>
+    <script>
+      function calcRent() {
+        const width = Number(prompt("Qual a largura da sala?"));
+        const length = Number(prompt("Qual o comprimento da sala?"));
+
+        const rent = 700 + width * length * 2;
+        alert(`O valor do aluguel é R$${rent.toFixed(2)}`);
+      }
+    </script>
+  </body>
+</html>
