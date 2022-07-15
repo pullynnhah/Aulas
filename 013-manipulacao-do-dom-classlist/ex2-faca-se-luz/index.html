@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Faça-se a luz</title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="lampada">
+      <div class="faca-se-a-luz"></div>
+    </div>
+
+    <div class="interruptores">
+      <button onclick="ligar()">Ligar</button>
+      <button onclick="desligar()">Desligar</button>
+      <button onclick="interruptor()">Interruptor</button>
+    </div>
+
+    <script>
+      function ligar() {
+        lampada.classList.add("acesa");
+      }
+
+      function desligar() {
+        lampada.classList.remove("acesa");
+      }
+
+      function interruptor() {
+        lampada.classList.toggle("acesa");
+      }
+
+      const lampada = document.querySelector(".lampada");
+    </script>
+  </body>
+</html>
