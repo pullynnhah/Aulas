@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="d-flex full-size">
+      <div class="d-flex contador">
+        <button class="big decrementar" onclick="decrementar();">
+          -
+        </button>
+        <div class="big valor">0</div>
+        <button class="big incrementar" onclick="incrementar();">
+          +
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function decrementar() {
+        valorAtual--;
+        atualizarValor();
+      }
+
+      function incrementar() {
+        valorAtual++;
+        atualizarValor();
+      }
+
+      function atualizarValor() {
+        elemento.innerHTML = `${valorAtual}`;
+      }
+
+      const elemento = document.querySelector(".valor");
+      let valorAtual = 0;
+    </script>
+  </body>
+</html>
