@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercício</title>
+  </head>
+  <body>
+    <div class="topo">BootTrello</div>
+    <div class="listas">
+      <div class="lista">
+        <div class="titulo">A fazer</div>
+        <ul class="lista-a-fazer">
+          <li>Exemplo 3</li>
+          <li>Exemplo 4</li>
+        </ul>
+      </div>
+
+      <div class="lista">
+        <div class="titulo">Feito</div>
+        <ul class="lista-feito">
+          <li>Exemplo 1</li>
+          <li>Exemplo 2</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const tarefasAFazer = [
+        "Estudar",
+        "Assistir Friends recitando as falas junto",
+        "Ver vídeos de gatinhos até dormir"
+      ];
+
+      const tarefasFeitas = [
+        "Surtar pela primeira vez hoje",
+        "Surtar pela segunda vez hoje",
+        "Posição Fetal Nº 4",
+        "Fazer carinho no Toninho"
+      ];
+
+      function imprimirListaAFazer() {
+        const ul = document.querySelector(".lista-a-fazer");
+        ul.innerHTML = '';
+        for (let i = 0; i < tarefasAFazer.length; i++) {
+          ul.innerHTML += `<li>${tarefasAFazer[i]}</li>`
+        }
+      }
+
+      function imprimirListaFeito() {
+        const ul = document.querySelector(".lista-feito");
+        ul.innerHTML = '';
+        for (let i = 0; i < tarefasFeitas.length; i++) {
+          ul.innerHTML += `<li>${tarefasFeitas[i]}</li>`
+        }
+      }
+
+      imprimirListaAFazer();
+      imprimirListaFeito();
+    </script>
+  </body>
+</html>

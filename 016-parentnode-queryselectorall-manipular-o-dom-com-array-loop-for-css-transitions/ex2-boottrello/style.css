@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("gatitos.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+.topo {
+  background-color: red;
+  color: white;
+  font-size: 28px;
+  padding: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+.listas {
+  width: 100%;
+  min-height: calc(100vh - 83px);
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.lista {
+  background-color: white;
+  border-radius: 5px;
+  width: 300px;
+  max-width: 100%;
+  margin-right: 20px;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lista .titulo {
+  font-size: 28px;
+  font-weight: bold;
+  background-color: red;
+  padding: 14px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+}
+
+li {
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+
+li:nth-child(odd) {
+  background-color: #eee;
+}

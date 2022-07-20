@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Syntax sugar 2</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <button class="doce" onclick="adicionarPensamento()">
+    Adicionar pensamento
+  </button>
+
+  <ul class="pensamentos">
+    <li onclick="apagarItem(this)">Tourtuguita, é isso aí</li>
+    <li onclick="apagarItem(this)">
+      Barraca do Responde Aí tá dando chocolate de graça...
+    </li>
+  </ul>
+
+  <div class="container">
+    <div class="pirulito"></div>
+    <div class="cereal-container">
+      <div class="cereal-laranja"></div>
+      <div class="cereal-branco"></div>
+    </div>
+    <div class="twizzler"></div>
+  </div>
+
+  <body>
+    <script>
+      function adicionarPensamento() {
+        const pensamento = prompt("Qual o seu pensamento de açucar? ");
+
+        const lista = document.querySelector(".pensamentos");
+
+        lista.innerHTML += `
+          <li onclick="apagarItem(this)">${pensamento}</li>
+        `;
+      }
+
+      function apagarItem(elemento) {
+        elemento.remove()
+        alert("Item apagado!");
+      }
+    </script>
+  </body>
+</html>
