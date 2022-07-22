@@ -1,0 +1,112 @@
+body {
+  font-family: "Comic Neue", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-position-x: -300px;
+  background-position-y: 180px;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid rgb(42, 197, 218);
+  width: 200px;
+  margin-left: 20px;
+}
+
+input:focus-visible {
+  border: none;
+  border-bottom: 2px solid rgb(42, 197, 218);
+}
+
+h1 {
+  padding: 15px;
+  background-color: rgb(42, 197, 218);
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+img {
+  width: 100px;
+  height: auto;
+  margin: 10px 40px;
+  transition: ease all 100ms;
+  box-sizing: border-box;
+}
+
+button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(42, 197, 218);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: "Comic Neue", cursive;
+  cursor: pointer;
+  transition: all 500ms ease;
+  font-weight: 700;
+  font-size: large;
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(28, 217, 241);
+  font-weight: 700;
+}
+
+p {
+  width: 300px;
+}
+
+.caracteristicas-do-personagem {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  padding-bottom: 10px;
+}
+
+.personagem-feito {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+  height: 200px;
+  border: 1px rgb(192, 192, 192) solid;
+  padding-bottom: 10px;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.caixa-do-formulario {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.logo-escolhida {
+  border-bottom: solid 4px rgb(42, 197, 218);
+}
+
+.personagens-criados li {
+  width: 500px;
+  background: rgb(42, 197, 218);
+  color: #FFF;
+  font-weight: bold;
+  text-align: left;
+  padding: 15px 30px;
+  margin: 15px 0;
+}

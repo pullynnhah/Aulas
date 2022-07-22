@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeroLab</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Crie seu personagem</h1>
+
+    <div class="caracteristicas-do-personagem">
+      <div class="informacoes">
+        <div class="caixa-do-formulario">
+          <label>Nome</label>
+          <input type="text" class="codinome" placeholder="Ex.: Batgirl" />
+        </div>
+        <div class="caixa-do-formulario">
+          <label>Identidade secreta</label>
+          <input
+            type="text"
+            class="id-secreta"
+            placeholder="Ex.: Barbara Gordon"
+          />
+        </div>
+        <div class="caixa-do-formulario">
+          <label>Poder</label>
+          <input type="text" class="poder" placeholder="Ex.: inteligência" />
+        </div>
+        <div class="caixa-do-formulario">
+          <label>Nacionalidade</label>
+          <input
+            type="text"
+            class="nacionalidade"
+            placeholder="Ex.: americana"
+          />
+        </div>
+        <button onclick="criarPersonagem()">Adicionar Personagem</button>
+      </div>
+    </div>
+    <ul class="personagens-criados"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>
