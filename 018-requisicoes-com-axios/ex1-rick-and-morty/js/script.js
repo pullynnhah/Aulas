@@ -1,22 +1,14 @@
 function buscarDados() {
   const promise = axios.get("https://rickandmortyapi.com/api/character/118");
-  promise.then(getPersonagem);
+  promise.then(renderizarPersonagem);
 }
-
-function getPersonagem(response) {
-  personagem = response.data;
-  renderizarPersonagem(personagem);
-}
-
 
 function renderizarPersonagem(personagem) {
   const elementoImagem = document.querySelector(".imagem-do-personagem");
   const elementoNome = document.querySelector(".nome");
   const elementoEspecie = document.querySelector(".especie");
 
-  elementoImagem.src = personagem.image;
-  elementoNome.textContent = personagem.name;
-  elementoEspecie.textContent = personagem.species;
+  elementoImagem.src = personagem.data.image;
+  elementoNome.textContent = personagem.data.name;
+  elementoEspecie.textContent = personagem.data.species;
 }
-
-let personagem = null;
