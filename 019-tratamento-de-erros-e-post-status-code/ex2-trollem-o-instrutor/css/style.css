@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/matrix.gif");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  font-family: "Roboto Mono", monospace;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.inserir-receita {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.entrada:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+input,
+textarea,
+button {
+  font-family: "Roboto Mono", monospace;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: green;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 2px;
+}
+
+button {
+  background-color: green;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+.imagem-erro img {
+  margin-top: 20px;
+  width: 100%;
+}

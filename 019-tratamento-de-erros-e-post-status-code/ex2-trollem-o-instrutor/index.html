@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Exercício</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="inserir-receita">
+        <div class="logo">
+          <img src="img/guy-fawkes.png" />
+        </div>
+
+        <div class="entrada">
+          <div class="label">Título</div>
+          <input type="text" class="titulo-receita" />
+        </div>
+
+        <div class="entrada">
+          <div class="label">Ingredientes</div>
+          <textarea class="ingredientes-receita"></textarea>
+        </div>
+
+        <div class="entrada">
+          <div class="label">Modo de Preparo</div>
+          <textarea class="preparo-receita"></textarea>
+        </div>
+
+        <button onclick="inserirReceita()">Inserir nova receita</button>
+
+        <div class="imagem-erro"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
