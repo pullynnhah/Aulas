@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.topo {
+  height: 70px;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.corpo {
+  min-height: calc(100vh - 120px);
+  display: flex;
+}
+
+.corpo div {
+  padding: 20px;
+}
+
+.rodape {
+  height: 50px;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
