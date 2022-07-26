@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  transition: all ease 0.2s;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 138px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cell .plus {
+  background-color: #28a745;
+}
+
+.cell .minus {
+  background-color: #dc3545;
+}
+
+.cell .plus,
+.cell .minus {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+
+.cell .value {
+  margin: 10px 0;
+}
+
+.cell * {
+  cursor: pointer;
+}
+
+.cell *:hover {
+  filter: brightness(1.2);
+}
