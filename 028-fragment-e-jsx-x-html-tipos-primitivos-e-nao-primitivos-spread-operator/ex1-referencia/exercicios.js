@@ -14,7 +14,7 @@ function aumentarIdade(pessoa) {
  * deve ser o dobro do último.
  */
 function adicionaDobroDoUltimo(array) {
-  array.push(array[array.length - 1] * 2);
+  array.push(array.at(-1) * 2);
 }
 
 /*
@@ -35,5 +35,5 @@ function adicionaEmail(pessoa) {
  * mais 1.
  */
 function adicionaNovoValor(array) {
-  return [...array, array[array.length - 1] + 1];
+  return [...array, array.at(-1) + 1];
 }
