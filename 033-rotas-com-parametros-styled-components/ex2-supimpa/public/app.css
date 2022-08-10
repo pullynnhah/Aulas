@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  font-family: monospace;
+}
+
+body {
+  background: #bf3978;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+.discoball {
+  margin-bottom: 40px;
+
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-name: hue;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  background: lightgrey;
+  border-radius: 200px;
+  /*border: 0px solid #fff;*/
+  height: 200px;
+  width: 200px;
+  box-shadow: 0 3px 200px -3px #fff;
+}
+.discoball img {
+  height: 200px;
+  width: 200px;
+}
+.hanger {
+  background: #eee;
+  width: 1px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  height: 60px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+}
+.header {
+  background: #752656;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 60px;
+  top: 0;
+}
+.disco-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  text-align: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sansita Swashed", cursive;
+  color: white;
+}

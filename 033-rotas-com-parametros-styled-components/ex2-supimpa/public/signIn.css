@@ -1,0 +1,35 @@
+.container {
+  box-sizing: border-box;
+  padding: 15px 0;
+  margin: 10px auto;
+  width: 300px;
+  height: 150px;
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-wrapper input {
+  width: 150px;
+  border: none;
+  border-bottom: solid 1px #a7a7a7;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: #752656;
+  color: white;
+  font-weight: bold;
+  width: 90px;
+  height: 30px;
+  border-radius: 15px;
+}
