@@ -14,9 +14,9 @@ const app = express();
 app.use(express.json());
 
 /* Products Routes */
-app.get('/products', async (req, res) => {
+app.get("/products", async (req, res) => {
   try {
-    const products = await db.collection('products').find().toArray();
+    const products = await db.collection("products").find().toArray();
     res.send(products);
   } catch (error) {
     console.error(error);
@@ -24,11 +24,11 @@ app.get('/products', async (req, res) => {
   }
 });
 
-app.get('/products/:id', async (req, res) => {
+app.get("/products/:id", async (req, res) => {
   const id = req.params.id;
 
   try {
-    const product = await db.collection('products').findOne({ _id: new ObjectId(id) })
+    const product = await db.collection("products").findOne({_id: new ObjectId(id)});
     if (!product) {
       return res.sendStatus(404);
     }
@@ -40,10 +40,10 @@ app.get('/products/:id', async (req, res) => {
   }
 });
 
-app.post('/products', async (req, res) => {
+app.post("/products", async (req, res) => {
   const product = req.body;
   try {
-    await db.collection('products').insertOne(product)
+    await db.collection("products").insertOne(product);
     res.sendStatus(201);
   } catch (error) {
     console.error(error);
@@ -51,11 +51,11 @@ app.post('/products', async (req, res) => {
   }
 });
 
-app.delete('/products/:id', async (req, res) => {
+app.delete("/products/:id", async (req, res) => {
   const id = req.params.id;
 
   try {
-    await db.collection('products').deleteOne({ _id: new ObjectId(id) })
+    await db.collection("products").deleteOne({_id: new ObjectId(id)});
 
     res.sendStatus(200);
   } catch (error) {
@@ -65,9 +65,9 @@ app.delete('/products/:id', async (req, res) => {
 });
 
 /* Customers Routes */
-app.get('/customers', async (req, res) => {
+app.get("/customers", async (req, res) => {
   try {
-    const customers = await db.collection('customers').find().toArray();
+    const customers = await db.collection("customers").find().toArray();
     res.send(customers);
   } catch (err) {
     console.error(err);
@@ -75,11 +75,11 @@ app.get('/customers', async (req, res) => {
   }
 });
 
-app.get('/customers/:id', async (req, res) => {
+app.get("/customers/:id", async (req, res) => {
   try {
     const id = req.params.id;
 
-    const customer = await db.collection('customers').findOne({ _id: new ObjectId(id) });
+    const customer = await db.collection("customers").findOne({_id: new ObjectId(id)});
 
     if (!customer) {
       return res.sendStatus(404);
@@ -92,11 +92,11 @@ app.get('/customers/:id', async (req, res) => {
   }
 });
 
-app.post('/customers', async (req, res) => {
+app.post("/customers", async (req, res) => {
   try {
     const customer = req.body;
 
-    await db.collection('customers').insertOne(customer);
+    await db.collection("customers").insertOne(customer);
 
     res.sendStatus(201);
   } catch (err) {
@@ -105,11 +105,11 @@ app.post('/customers', async (req, res) => {
   }
 });
 
-app.delete('/customers/:id', async (req, res) => {
+app.delete("/customers/:id", async (req, res) => {
   try {
     const id = req.params.id;
 
-    await db.collection('customers').deleteOne({ _id: new ObjectId(id) });
+    await db.collection("customers").deleteOne({_id: new ObjectId(id)});
 
     res.sendStatus(200);
   } catch (err) {
@@ -119,5 +119,5 @@ app.delete('/customers/:id', async (req, res) => {
 });
 
 app.listen(5000, () => {
-  console.log('Server is litening on port 5000.');
+  console.log("Server is litening on port 5000.");
 });
