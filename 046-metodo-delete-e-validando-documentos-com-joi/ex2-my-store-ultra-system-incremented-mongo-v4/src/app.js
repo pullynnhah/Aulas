@@ -82,6 +82,26 @@ app.delete("/products/:id", async (req, res) => {
   }
 });
 
+app.put("/products/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const product = req.body;
+
+    const {modifiedCount} = await db
+      .collection("products")
+      .updateOne({_id: new ObjectId(id)}, {$set: product});
+
+    if (modifiedCount === 0) {
+      res.sendStatus(404);
+      return;
+    }
+    res.sendStatus(200);
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+});
+
 /* Customers Routes */
 app.get("/customers", async (req, res) => {
   try {
@@ -133,6 +153,26 @@ app.delete("/customers/:id", async (req, res) => {
 
     await db.collection("customers").deleteOne({_id: new ObjectId(id)});
 
+    res.sendStatus(200);
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+});
+
+app.put("/customers/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const customer = req.body;
+
+    const {modifiedCount} = await db
+      .collection("customers")
+      .updateOne({_id: new ObjectId(id)}, {$set: customer});
+
+    if (modifiedCount === 0) {
+      res.sendStatus(404);
+      return;
+    }
     res.sendStatus(200);
   } catch (err) {
     console.log(err);
